@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="/src/index.css" />
     <title>Swipe</title>
   </head>
-  <body class="bg-primary flex flex-col items-center justify-center pt-2">
-    <nav class="flex w-full max-w-7xl items-center justify-between">
+  <body
+    class="text-dark pt-sm box-border flex w-full flex-col items-center justify-center bg-gray-400"
+  >
+    <nav class="max-w-max-width flex w-full items-center justify-between">
       <img src="src/assets/logo-white.svg" alt="" />
       <ul
         class="flex items-center justify-center gap-4 font-bold text-white [&>li>a]:hover:underline"
@@ -25,30 +27,54 @@
         Sign In
       </button>
     </nav>
-    <div class="two-column">
-      <div class="column-left">
-        <h3>Heading 3</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-          perspiciatis tempora ipsam eius quae aperiam deleniti ipsum
-          exercitationem modi, qui earum, odit minima corporis ad praesentium
-          eaque cupiditate distinctio. Dignissimos.
-        </p>
-      </div>
-      <div class="column-right">
-        <h3>Heading 3</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-          perspiciatis tempora ipsam eius quae aperiam deleniti ipsum
-          exercitationem modi, qui earum, odit minima corporis ad praesentium
-          eaque cupiditate distinctio. Dignissimos.
-        </p>
+    <main class="my-xl">
+      <div>
         <div class="two-column">
-          <div class="column-left">fevfbvnfbvonfeov</div>
-          <div class="column-right">fevfbvnfbvonfeov</div>
+          <div class="column-left">
+            <h1
+              class="text-h1-size pb-md leading-h1-height w-full font-semibold tracking-[-1px]"
+            >
+              Payments infrastructure for the world
+            </h1>
+            <p class="pb-md max-w-[460px]">
+              Tons of companies all over the world use Swipe's seamless platform
+              to manage their businesses's entire financial transaction
+              infrastructure online.
+            </p>
+            <div class="my-md flex">
+              <button
+                class="group text-button-size bg-primary-accent py-sm px-md hover:bg-primary-button-hover flex cursor-pointer rounded-[20px] border-none tracking-[1.25px] text-white transition-all duration-150 ease-in-out"
+              >
+                Start now
+                <img
+                  class="transition-transform delay-150 ease-in-out group-hover:translate-x-1"
+                  src="src/assets/arrow-right-light.svg"
+                  alt=""
+                />
+              </button>
+
+              <button
+                class="group text-button-size py-sm px-md text-purple-2 flex cursor-pointer rounded-[20px] border-none bg-transparent tracking-[1.25px] transition-all duration-150 ease-in-out hover:opacity-75"
+              >
+                Contact sales
+                <img
+                  class="text-purple-2 transition-transform delay-150 ease-in-out group-hover:translate-x-1"
+                  src="src/assets/arrow-right-purple.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+          <div class="column-right">
+            <img
+              class="h-[500px] translate-x-8 self-end"
+              src="src/assets//hero-phone.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </main>
     <div id="root"></div>
   </body>
 </html>

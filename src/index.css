@@ -1,17 +1,53 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #6962f7;
+  --color-purple-1: #6962f7;
+  --color-purple-2: #7000ff;
+  --color-blue-1: #00d4ff;
+  --color-primary-accent: #0a2540;
+  --color-primary-button-hover: #6d7a88;
+  --color-light: #f7f9fc;
+  --text-dark: #000;
+  --text-grey: #adbdcc;
+
+  --body-font: "Roboto", sans-serif;
+  --heading-font: "Anek Telugu", sans-serif;
+
+  --text-h1-size: 94px;
+  --leading-h1-height: 108px;
+
+  --text-h2-size: 50px;
+  --leading-h2-height: 75px;
+
+  --text-h3-size: 40px;
+  --text-h4-size: 32px;
+  --text-h5-size: 28px;
+  --text-h6-size: 22px;
+  --text-subtitle-size: 17px;
+  --text-subtitle-height: 26px;
+
+  --text-p-size: 18px;
+  --leading-p-height: 26px;
+  --text-button-size: 16px;
+
+  --secondary-text-size: 14px;
+  --secondary-text-height: 18px;
+
+  --spacing-max-width: 1144px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
 }
 
 .two-column {
-  @apply box-border flex w-full max-w-7xl items-start justify-center;
+  @apply max-w-max-width box-border flex w-full items-start justify-center;
 }
 
 .column-left {
-  @apply box-border flex w-1/2 flex-col items-start justify-center pr-4;
+  @apply pr-md box-border flex w-1/2 flex-col items-start justify-center;
 }
 
 .column-right {
-  @apply box-border flex w-1/2 flex-col items-start justify-center pl-4;
+  @apply pl-md box-border flex w-1/2 flex-col items-start justify-center;
 }
