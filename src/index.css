@@ -1,1 +1,17 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6962f7;
+}
+
+.two-column {
+  @apply box-border flex w-full max-w-7xl items-start justify-center;
+}
+
+.column-left {
+  @apply box-border flex w-1/2 flex-col items-start justify-center pr-4;
+}
+
+.column-right {
+  @apply box-border flex w-1/2 flex-col items-start justify-center pl-4;
+}

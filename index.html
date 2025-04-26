@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,8 +7,48 @@
     <link rel="stylesheet" href="/src/index.css" />
     <title>Swipe</title>
   </head>
-  <body>
-    <h1>Hello World!</h1>
+  <body class="bg-primary flex flex-col items-center justify-center pt-2">
+    <nav class="flex w-full max-w-7xl items-center justify-between">
+      <img src="src/assets/logo-white.svg" alt="" />
+      <ul
+        class="flex items-center justify-center gap-4 font-bold text-white [&>li>a]:hover:underline"
+      >
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Developers</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+      <button
+        class="rounded-full bg-white/25 px-4 py-2 text-white hover:underline"
+      >
+        Sign In
+      </button>
+    </nav>
+    <div class="two-column">
+      <div class="column-left">
+        <h3>Heading 3</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+          perspiciatis tempora ipsam eius quae aperiam deleniti ipsum
+          exercitationem modi, qui earum, odit minima corporis ad praesentium
+          eaque cupiditate distinctio. Dignissimos.
+        </p>
+      </div>
+      <div class="column-right">
+        <h3>Heading 3</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
+          perspiciatis tempora ipsam eius quae aperiam deleniti ipsum
+          exercitationem modi, qui earum, odit minima corporis ad praesentium
+          eaque cupiditate distinctio. Dignissimos.
+        </p>
+        <div class="two-column">
+          <div class="column-left">fevfbvnfbvonfeov</div>
+          <div class="column-right">fevfbvnfbvonfeov</div>
+        </div>
+      </div>
+    </div>
     <div id="root"></div>
   </body>
 </html>
