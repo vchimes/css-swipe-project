@@ -24,7 +24,7 @@
   --text-h5-size: 28px;
   --text-h6-size: 22px;
   --text-subtitle-size: 17px;
-  --text-subtitle-height: 26px;
+  --leading-subtitle-height: 26px;
 
   --text-p-size: 18px;
   --leading-p-height: 26px;
@@ -38,6 +38,8 @@
   --spacing-md: 16px;
   --spacing-lg: 32px;
   --spacing-xl: 64px;
+
+  --drop-shadow-standard: 0px 2px 40px rgba(0, 0, 0, 0.15);
 }
 
 .two-column {
