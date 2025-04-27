@@ -42,18 +42,56 @@
   --drop-shadow-standard: 0px 2px 40px rgba(0, 0, 0, 0.15);
 }
 
-.two-column {
-  @apply max-w-max-width box-border flex w-full items-start justify-center;
-}
+@layer components {
+  .two-column {
+    @apply max-w-max-width box-border flex w-full items-start justify-center;
+  }
 
-.column-left {
-  @apply pr-md box-border flex w-1/2 flex-col items-start justify-center;
-}
+  .column-left {
+    @apply pr-md box-border flex w-1/2 flex-col items-start justify-center;
+  }
 
-.column-right {
-  @apply pl-md box-border flex w-1/2 flex-col items-start justify-center;
-}
+  .column-right {
+    @apply pl-md box-border flex w-1/2 flex-col items-start justify-center;
+  }
 
-.partners-grid img {
-  @apply h-[60px] place-self-center;
+  .partners-grid img {
+    @apply h-[60px] place-self-center;
+  }
+
+  a {
+    @apply text-purple-1 hover:text-primary-accent font-medium transition-colors duration-250 ease-in-out;
+  }
+
+  .graphic-grid {
+    display: grid;
+    grid-template-areas:
+      "card slack slack"
+      "phone slack slack"
+      "phone dash dash";
+    grid-gap: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+  }
+
+  #credit-card {
+    grid-area: card;
+    width: 100%;
+    box-shadow: var(--drop-shadow-standard);
+  }
+  #slack-invoice {
+    grid-area: slack;
+    width: 100%;
+    box-shadow: var(--drop-shadow-standard);
+  }
+
+  #phone {
+    grid-area: phone;
+    width: 100%;
+    box-shadow: var(--drop-shadow-standard);
+  }
+  #dash {
+    grid-area: dash;
+    width: 100%;
+    box-shadow: var(--drop-shadow-standard);
+  }
 }
