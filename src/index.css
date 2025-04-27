@@ -51,3 +51,7 @@
 .column-right {
   @apply pl-md box-border flex w-1/2 flex-col items-start justify-center;
 }
+
+.partners-grid img {
+  @apply h-[60px] place-self-center;
+}
