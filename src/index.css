@@ -55,6 +55,22 @@
     @apply pl-md box-border flex w-1/2 flex-col items-start justify-center;
   }
 
+  .icon-animation {
+    @apply transition-transform delay-100 ease-in-out group-hover:translate-x-1;
+  }
+
+  .black-button {
+    @apply text-button-size bg-primary-accent py-sm px-md hover:bg-primary-button-hover flex cursor-pointer rounded-[20px] border-none tracking-[1.25px] text-white transition-all delay-150 duration-100 ease-in-out;
+  }
+
+  .purple-button {
+    @apply text-button-size bg-purple-1 my-lg py-sm px-md hover:bg-primary-accent flex cursor-pointer rounded-[20px] border-none tracking-[1.25px] text-white transition-all delay-150 duration-100 ease-in-out;
+  }
+
+  .secondary-button {
+    @apply text-button-size py-sm px-md flex cursor-pointer rounded-[20px] border-none bg-transparent tracking-[1.25px] transition-all duration-150 ease-in-out hover:opacity-75;
+  }
+
   .partners-grid img {
     @apply h-[60px] place-self-center;
   }
