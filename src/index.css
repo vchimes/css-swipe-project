@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -7,11 +8,11 @@
   --color-primary-accent: #0a2540;
   --color-primary-button-hover: #6d7a88;
   --color-light: #f7f9fc;
-  --text-dark: #000;
-  --text-grey: #adbdcc;
+  --color-dark: #000;
+  --color-grey: #adbdcc;
 
-  --body-font: "Roboto", sans-serif;
-  --heading-font: "Anek Telugu", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-anek: "Anek Telugu", sans-serif;
 
   --text-h1-size: 94px;
   --leading-h1-height: 108px;
@@ -42,7 +43,22 @@
   --drop-shadow-standard: 0px 2px 40px rgba(0, 0, 0, 0.15);
 }
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-anek font-semibold;
+  }
+}
+
 @layer components {
+  .section-container {
+    @apply max-w-max-width w-full;
+  }
+
   .two-column {
     @apply max-w-max-width box-border flex w-full items-start justify-center;
   }
@@ -60,23 +76,27 @@
   }
 
   .black-button {
-    @apply text-button-size bg-primary-accent py-sm px-md hover:bg-primary-button-hover flex cursor-pointer rounded-[20px] border-none tracking-[1.25px] text-white transition-all delay-150 duration-100 ease-in-out;
+    @apply text-button-size bg-primary-accent py-sm px-md hover:bg-primary-button-hover flex cursor-pointer rounded-[20px] border-none tracking-[1.25px] text-white transition-all delay-100 duration-100 ease-in-out;
   }
 
   .purple-button {
-    @apply text-button-size bg-purple-1 my-lg py-sm px-md hover:bg-primary-accent flex cursor-pointer rounded-[20px] border-none tracking-[1.25px] text-white transition-all delay-150 duration-100 ease-in-out;
+    @apply text-button-size bg-purple-1 my-lg py-sm px-md hover:bg-primary-accent flex cursor-pointer rounded-[20px] border-none tracking-[1.25px] text-white transition-all delay-100 duration-100 ease-in-out;
   }
 
   .secondary-button {
-    @apply text-button-size py-sm px-md flex cursor-pointer rounded-[20px] border-none bg-transparent tracking-[1.25px] transition-all duration-150 ease-in-out hover:opacity-75;
+    @apply text-button-size py-sm px-md flex cursor-pointer rounded-[20px] border-none bg-transparent tracking-[1.25px] transition-all duration-100 ease-in-out hover:opacity-75;
   }
 
   .partners-grid img {
     @apply h-[60px] place-self-center;
   }
 
-  a {
+  .purple-link {
     @apply text-purple-1 hover:text-primary-accent font-medium transition-colors duration-250 ease-in-out;
+  }
+
+  .blue-link {
+    @apply text-blue-1 font-medium transition-colors duration-250 ease-in-out hover:text-white;
   }
 
   .graphic-grid {
