@@ -79,15 +79,15 @@
   }
 
   .black-button {
-    @apply text-button-size bg-primary-accent py-sm px-md hover:bg-primary-button-hover flex cursor-pointer rounded-[20px] border-none tracking-[1.25px] text-white transition-all delay-100 duration-100 ease-in-out;
+    @apply text-button-size bg-primary-accent py-sm px-md hover:bg-primary-button-hover flex cursor-pointer rounded-[20px] border-none font-semibold tracking-[1.25px] text-white transition-all delay-100 duration-100 ease-in-out;
   }
 
   .purple-button {
-    @apply text-button-size bg-purple-1 my-lg py-sm px-md hover:bg-primary-accent flex cursor-pointer rounded-[20px] border-none tracking-[1.25px] text-white transition-all delay-100 duration-100 ease-in-out;
+    @apply text-button-size bg-purple-1 my-lg py-sm px-md hover:bg-primary-accent flex cursor-pointer rounded-[20px] border-none font-semibold tracking-[1.25px] text-white transition-all delay-100 duration-100 ease-in-out;
   }
 
   .secondary-button {
-    @apply text-button-size py-sm px-md flex cursor-pointer rounded-[20px] border-none bg-transparent tracking-[1.25px] transition-all duration-100 ease-in-out hover:opacity-75;
+    @apply text-button-size py-sm px-md flex cursor-pointer rounded-[20px] border-none bg-transparent font-semibold tracking-[1.25px] transition-all duration-100 ease-in-out hover:opacity-75;
   }
 
   .partners-grid img {
@@ -100,6 +100,10 @@
 
   .blue-link {
     @apply text-blue-1 font-medium transition-colors duration-250 ease-in-out hover:text-white;
+  }
+
+  footer a {
+    @apply hover:text-purple-1 transition-colors duration-250 ease-in-out hover:underline;
   }
 
   .graphic-grid {

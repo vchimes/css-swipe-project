@@ -10,7 +10,7 @@
   <body
     class="text-dark pt-sm font-roboto box-border flex w-full flex-col items-center justify-center bg-white"
   >
-    <nav class="max-w-max-width flex w-full items-center justify-between">
+    <nav class="max-w-max-width mb-xl flex w-full items-center justify-between">
       <img src="src/assets/logo-white.svg" alt="" />
       <ul
         class="flex items-center justify-center gap-4 font-bold text-white [&>li>a]:hover:underline"
@@ -27,7 +27,7 @@
         Sign In
       </button>
     </nav>
-    <main class="my-xl w-full">
+    <main class="mt-xl w-full">
       <div class="flex items-center justify-center">
         <div class="two-column">
           <div class="column-left">
@@ -61,9 +61,9 @@
               </button>
             </div>
           </div>
-          <div class="column-right">
+          <div class="column-right h-[600px]">
             <img
-              class="h-[500px] translate-x-8 self-end"
+              class="h-[675px] -translate-y-9 self-end"
               src="src/assets//hero-phone.png"
               alt=""
             />
@@ -84,7 +84,7 @@
           </div>
         </div>
       </div>
-      <div class="flex items-center justify-center">
+      <div class="bg-light flex items-center justify-center">
         <div class="py-xl section-container">
           <p
             class="text-subtitle-size text-purple-1 leading-subtitle-height font-anek font-medium"
@@ -96,7 +96,7 @@
           </h3>
           <div class="two-column">
             <div class="column-left">
-              <p>
+              <p class="text-p-size">
                 We've got everything you'll need and more to build websites and
                 apps that handle payments, payouts, and much more. Swipe’s
                 products power payments for
@@ -116,7 +116,7 @@
               </button>
             </div>
             <div class="column-right">
-              <p>
+              <p class="text-p-size">
                 We also help companies
                 <a class="purple-link" href="#">tackle fraud</a>,
                 <a class="purple-link" href="#">issue invoices</a>,
@@ -131,7 +131,7 @@
         </div>
       </div>
       <div>
-        <div class="flex items-center justify-center">
+        <div class="bg-light flex items-center justify-center">
           <div class="section-container">
             <div class="graphic-grid">
               <img id="credit-card" src="src/assets/credit-card.png" alt="" />
@@ -148,9 +148,9 @@
       </div>
 
       <div
-        class="bg-primary-accent flex items-center justify-center text-white"
+        class="before:bg-primary-accent after:bg-light relative flex items-center justify-center py-[calc(var(--spacing-xl)*3)] text-white before:absolute before:inset-0 before:-top-[2%] before:-left-[10%] before:z-0 before:h-[1100px] before:-skew-y-10 after:absolute after:inset-0 after:z-[-1] after:h-1/2"
       >
-        <div class="two-column section-container">
+        <div class="two-column section-container relative z-10">
           <div class="column-left">
             <p
               class="text-subtitle-size text-blue-1 my-md leading-subtitle-height font-anek font-medium"
@@ -186,12 +186,12 @@
                 />
                 <h3 class="text-h6-size">Tools for all stacks</h3>
                 <p
-                  class="text-secondary-size leading-secondary-height text-grey"
+                  class="text-secondary-size leading-secondary-height text-grey my-md"
                 >
                   We offer front end and back end libraries in some of the most
                   widely used technologies, old and new.
                 </p>
-                <button class="group secondary-button text-blue-1">
+                <button class="group secondary-button text-blue-1 pl-0">
                   See libraries
                   <img
                     class="icon-animation"
@@ -210,11 +210,13 @@
                   alt=""
                 />
                 <h3 class="text-h6-size">Custom integrations</h3>
-                <p>
+                <p
+                  class="text-secondary-size leading-secondary-height text-grey my-md"
+                >
                   Use integrations for systems like Shopify, WooCommerce,
                   NetSuite, and more.
                 </p>
-                <button class="group secondary-button text-blue-1">
+                <button class="group secondary-button text-blue-1 pl-0">
                   Explore partners
                   <img
                     class="icon-animation"
@@ -240,7 +242,9 @@
         </div>
       </div>
 
-      <div class="flex w-full items-center justify-center">
+      <div
+        class="flex w-full items-center justify-center py-[calc(var(--spacing-xl)*3)]"
+      >
         <div class="section-container">
           <p
             class="my-md text-subtitle-size text-purple-1 leading-subtitle-height font-anek font-medium"
@@ -258,7 +262,7 @@
                 alt=""
               />
               <h3 class="text-h6-size">Efficient always</h3>
-              <p>
+              <p class="my-md">
                 We've optimized every level of the finance stack, from
                 integrations to prebuilt checkout flows - no detail has been
                 spared.
@@ -274,7 +278,7 @@
                 alt=""
               />
               <h3 class="text-h6-size">Fast-improving</h3>
-              <p>
+              <p class="my-md">
                 We make constant updates and improvements to help you stay on
                 the cutting edge of your industry, deploying to production
                 around 20X per day!
@@ -289,7 +293,7 @@
                 alt=""
               />
               <h3 class="text-h6-size">Tried and true</h3>
-              <p>
+              <p class="my-md">
                 Our systems operate with 100% uptime, with scalability and
                 uptime as a guarantee. Swipe is super duper certified so don't
                 worry.
@@ -304,7 +308,7 @@
                 alt=""
               />
               <h3 class="text-h6-size">Crazy optimized</h3>
-              <p>
+              <p class="my-md">
                 We use machine learning trained on billions of data points to
                 help optimize all products, from fraud to revenue recovery and
                 more.
@@ -315,7 +319,7 @@
       </div>
 
       <div
-        class="bg-primary-accent relative flex w-full items-center justify-center py-[calc(var(--spacing-xl)*2)]"
+        class="before:bg-primary-accent relative flex w-full items-center justify-center pt-[calc(var(--spacing-xl)*3)] before:absolute before:-top-[4%] before:z-[-1] before:h-[1250px] before:w-full before:-skew-y-10"
       >
         <div class="section-container">
           <div class="two-column">
@@ -345,7 +349,9 @@
               />
             </div>
           </div>
-          <div class="max-w-max-width flex w-full">
+          <div
+            class="max-w-max-width my-[calc(var(--spacing-xl)*2)] flex w-full"
+          >
             <div
               class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
             >
@@ -399,7 +405,7 @@
       </div>
 
       <div
-        class="flex w-full items-center justify-center py-[calc(var(--spacing-xl)*2)]"
+        class="relative flex w-full items-center justify-center py-[calc(var(--spacing-xl)*2)] before:absolute before:z-[-1] before:h-full before:w-full before:bg-white"
       >
         <div class="two-column">
           <div class="column-left h-[446px]">
@@ -408,7 +414,7 @@
             >
               Virtual events
             </p>
-            <h2 class="text-h3-size">Check out sections now!</h2>
+            <h2 class="text-h3-size">Check out Sessions now!</h2>
             <p class="text-p-size pr-xl">
               Swipe Sessions is our annual conference - it's now available to
               watch on demand! Check it out and become an "internet economy"
@@ -463,6 +469,127 @@
           </div>
         </div>
       </div>
+
+      <div class="py-xl flex items-center justify-center">
+        <div class="two-column section-container">
+          <div class="column-left">
+            <h2 class="text-h3-size">What are you waiting for?</h2>
+            <p class="text-p-size pr-xl">
+              Explore <a class="purple-link" href="#">Swipe</a> now, or create
+              an account and start accepting payments today! If you need a
+              custom package for your business, let's chat today.
+            </p>
+            <button class="group purple-button">
+              Start now
+              <img
+                class="icon-animation"
+                src="src/assets/arrow-right-light.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="column-right">
+            <div class="flex">
+              <div
+                class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+              >
+                <img
+                  class="mb-sm h-[50px]"
+                  src="src/assets/shield-icon.png"
+                  alt=""
+                />
+                <h3 class="text-h6-size">Always know what you pay</h3>
+                <p
+                  class="text-secondary-size leading-secondary-height text-grey my-md"
+                >
+                  Integrated per-transaction pricing with no hidden fees.
+                </p>
+                <button class="group secondary-button text-purple-1 pl-0">
+                  Pricing details
+                  <img
+                    class="icon-animation"
+                    src="src/assets/arrow-right-purple.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+              <div
+                class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+              >
+                <img
+                  class="mb-sm h-[50px]"
+                  src="src/assets/bars-icon.png"
+                  alt=""
+                />
+                <h3 class="text-h6-size">Start your integration</h3>
+                <p
+                  class="text-secondary-size leading-secondary-height text-grey my-md"
+                >
+                  Get up and running with Stripe in as little as 10 minutes.
+                </p>
+                <button class="group secondary-button text-purple-1 pl-0">
+                  API reference
+                  <img
+                    class="icon-animation"
+                    src="src/assets/arrow-right-purple.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="py-xl bg-light flex items-center justify-center">
+        <div class="section-container flex">
+          <div class="w-1/4">
+            <img class="mb-lg" src="src/assets/logo-dark.svg" alt="" />
+            <div class="mb-md flex items-center">
+              <img class="w-6" src="src/assets/location-icon.png" alt="" />
+              <a href="#">United States</a>
+            </div>
+            <div class="flex items-center">
+              <img class="w-6" src="src/assets/comment-icon.png" alt="" />
+              <a href="#">English (United States)</a>
+            </div>
+            <div></div>
+          </div>
+          <div class="w-1/4">
+            <h3 class="text-h6-size font-semibold">Products</h3>
+            <ul class="my-md space-y-2.5">
+              <li><a href="#">Atlas</a></li>
+              <li><a href="#">Billing</a></li>
+              <li><a href="#">Invoicing</a></li>
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Checkout</a></li>
+              <li><a href="#">Identity</a></li>
+            </ul>
+          </div>
+          <div class="w-1/4">
+            <h3 class="text-h6-size font-semibold">Use Cases</h3>
+            <ul class="my-md space-y-2.5">
+              <li><a href="#">eCommerce</a></li>
+              <li><a href="#">SaaS</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Embedded Finance</a></li>
+              <li><a href="#">Crypto</a></li>
+              <li><a href="#">Creator Economy</a></li>
+            </ul>
+          </div>
+          <div class="w-1/4">
+            <h3 class="text-h6-size font-semibold">Resources</h3>
+            <ul class="my-md space-y-2.5">
+              <li><a href="#">Support Center</a></li>
+              <li><a href="#">Guides</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Licenses</a></li>
+              <li><a href="#">Privacy & Terms</a></li>
+              <li><a href="#">Cookie Settings</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </main>
     <div id="root"></div>
   </body>
