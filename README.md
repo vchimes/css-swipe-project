@@ -1,12 +1,7 @@
-# React + Vite
+## Swipe Project - TailwindCSS Edition
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the final project for _The HTML & CSS Bootcamp Edition_ by Colt Steele hosted by Udemy.
 
-Currently, two official plugins are available:
+Instead of using vanilla CSS and following the course exactly, I instead chose to use TailwindCSS for this project. The codebase is currently pretty messy, with every element in the HTML. This was done intentionally as a learning experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The goal will be to reorganize the code to use React Components.
