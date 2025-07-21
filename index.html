@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swipe</title>
+    <script type="module" crossorigin src="/css-swipe-project/assets/index-BBUqu9D5.js"></script>
+    <link rel="stylesheet" crossorigin href="/css-swipe-project/assets/index-Bor8hTF1.css">
+  </head>
+  <body
+    class="text-dark pt-sm font-roboto box-border flex w-full flex-col items-center justify-center bg-white"
+  >
+    <nav class="max-w-max-width mb-xl flex w-full items-center justify-between">
+      <img src="/css-swipe-project/assets/logo-white-C509s_3Z.svg" alt="" />
+      <ul
+        class="flex items-center justify-center gap-4 font-bold text-white [&>li>a]:hover:underline"
+      >
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Developers</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+      <button
+        class="rounded-full bg-white/25 px-4 py-2 text-white hover:underline"
+      >
+        Sign In
+      </button>
+    </nav>
+    <main class="mt-xl w-full">
+      <canvas id="gradient-canvas"></canvas>
+      <div class="flex items-center justify-center">
+        <div class="two-column">
+          <div class="column-left">
+            <h1
+              class="text-h1-size pb-md leading-h1-height w-full tracking-tight"
+            >
+              Payments infrastructure for the world
+            </h1>
+            <p class="pb-md font-roboto max-w-[460px]">
+              Tons of companies all over the world use Swipe's seamless platform
+              to manage their businesses's entire financial transaction
+              infrastructure online.
+            </p>
+            <div class="my-md flex">
+              <button class="group black-button">
+                Start now
+                <img
+                  class="icon-animation"
+                  src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.92%2011.62C17.8724%2011.4973%2017.801%2011.3851%2017.71%2011.29L12.71%206.29C12.6168%206.19676%2012.5061%206.1228%2012.3842%206.07234C12.2624%206.02188%2012.1319%205.99591%2012%205.99591C11.7337%205.99591%2011.4783%206.1017%2011.29%206.29C11.1968%206.38324%2011.1228%206.49393%2011.0723%206.61575C11.0219%206.73758%2010.9959%206.86814%2010.9959%207C10.9959%207.2663%2011.1017%207.5217%2011.29%207.71L14.59%2011H7C6.73478%2011%206.48043%2011.1054%206.29289%2011.2929C6.10536%2011.4804%206%2011.7348%206%2012C6%2012.2652%206.10536%2012.5196%206.29289%2012.7071C6.48043%2012.8946%206.73478%2013%207%2013H14.59L11.29%2016.29C11.1963%2016.383%2011.1219%2016.4936%2011.0711%2016.6154C11.0203%2016.7373%2010.9942%2016.868%2010.9942%2017C10.9942%2017.132%2011.0203%2017.2627%2011.0711%2017.3846C11.1219%2017.5064%2011.1963%2017.617%2011.29%2017.71C11.383%2017.8037%2011.4936%2017.8781%2011.6154%2017.9289C11.7373%2017.9797%2011.868%2018.0058%2012%2018.0058C12.132%2018.0058%2012.2627%2017.9797%2012.3846%2017.9289C12.5064%2017.8781%2012.617%2017.8037%2012.71%2017.71L17.71%2012.71C17.801%2012.6149%2017.8724%2012.5028%2017.92%2012.38C18.02%2012.1365%2018.02%2011.8635%2017.92%2011.62Z'%20fill='white'/%3e%3c/svg%3e"
+                  alt=""
+                />
+              </button>
+
+              <button class="group secondary-button text-purple-2">
+                Contact sales
+                <img
+                  class="icon-animation"
+                  src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.92%2011.62C17.8724%2011.4973%2017.801%2011.3851%2017.71%2011.29L12.71%206.29C12.6168%206.19676%2012.5061%206.1228%2012.3842%206.07234C12.2624%206.02188%2012.1319%205.99591%2012%205.99591C11.7337%205.99591%2011.4783%206.1017%2011.29%206.29C11.1968%206.38324%2011.1228%206.49393%2011.0723%206.61575C11.0219%206.73758%2010.9959%206.86814%2010.9959%207C10.9959%207.2663%2011.1017%207.5217%2011.29%207.71L14.59%2011H7C6.73478%2011%206.48043%2011.1054%206.29289%2011.2929C6.10536%2011.4804%206%2011.7348%206%2012C6%2012.2652%206.10536%2012.5196%206.29289%2012.7071C6.48043%2012.8946%206.73478%2013%207%2013H14.59L11.29%2016.29C11.1963%2016.383%2011.1219%2016.4936%2011.0711%2016.6154C11.0203%2016.7373%2010.9942%2016.868%2010.9942%2017C10.9942%2017.132%2011.0203%2017.2627%2011.0711%2017.3846C11.1219%2017.5064%2011.1963%2017.617%2011.29%2017.71C11.383%2017.8037%2011.4936%2017.8781%2011.6154%2017.9289C11.7373%2017.9797%2011.868%2018.0058%2012%2018.0058C12.132%2018.0058%2012.2627%2017.9797%2012.3846%2017.9289C12.5064%2017.8781%2012.617%2017.8037%2012.71%2017.71L17.71%2012.71C17.801%2012.6149%2017.8724%2012.5028%2017.92%2012.38C18.02%2012.1365%2018.02%2011.8635%2017.92%2011.62Z'%20fill='%237000FF'/%3e%3c/svg%3e"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+          <div class="column-right h-[600px]">
+            <img
+              class="h-[675px] -translate-y-9 self-end"
+              src="/css-swipe-project/assets/hero-phone-Bi7pl0iV.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <div class="section-container">
+          <div class="partners-grid my-xl gap-x-md gap-y-lg grid grid-cols-4">
+            <img src="/css-swipe-project/assets/instacart-DT7dOeDk.png" alt="Instacart" />
+            <img src="/css-swipe-project/assets/salesforce-Qg_VVv1C.png" alt="Salesforce" />
+            <img src="/css-swipe-project/assets/amazon-DCVSZN6T.png" alt="Amazon" />
+            <img src="data:image/png;base64,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" alt="Slack" />
+            <img src="/css-swipe-project/assets/shopify-D_XVfBVi.png" alt="Shopify" />
+            <img src="/css-swipe-project/assets/google-DOBok12u.png" alt="Google" />
+            <img src="data:image/png;base64,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" alt="Lyft" />
+            <img src="data:image/png;base64,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" alt="Zoom" />
+          </div>
+        </div>
+      </div>
+      <div class="bg-light flex items-center justify-center">
+        <div class="py-xl section-container">
+          <p
+            class="text-subtitle-size text-purple-1 leading-subtitle-height font-anek font-medium"
+          >
+            Unified platform
+          </p>
+          <h3 class="text-h3-size mt-md mb-lg w-1/2 leading-tight">
+            All the payment products you'll ever need
+          </h3>
+          <div class="two-column">
+            <div class="column-left">
+              <p class="text-p-size">
+                We've got everything you'll need and more to build websites and
+                apps that handle payments, payouts, and much more. Swipe’s
+                products power payments for
+                <a class="purple-link" href="#"> all kinds of retailers</a>,
+                <a class="purple-link" href="#"> all kinds of businesses</a>,
+                <a class="purple-link" href="#">
+                  software platforms & marketplaces</a
+                >, and everything in between.
+              </p>
+              <button class="group purple-button">
+                Start now
+                <img
+                  class="icon-animation"
+                  src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.92%2011.62C17.8724%2011.4973%2017.801%2011.3851%2017.71%2011.29L12.71%206.29C12.6168%206.19676%2012.5061%206.1228%2012.3842%206.07234C12.2624%206.02188%2012.1319%205.99591%2012%205.99591C11.7337%205.99591%2011.4783%206.1017%2011.29%206.29C11.1968%206.38324%2011.1228%206.49393%2011.0723%206.61575C11.0219%206.73758%2010.9959%206.86814%2010.9959%207C10.9959%207.2663%2011.1017%207.5217%2011.29%207.71L14.59%2011H7C6.73478%2011%206.48043%2011.1054%206.29289%2011.2929C6.10536%2011.4804%206%2011.7348%206%2012C6%2012.2652%206.10536%2012.5196%206.29289%2012.7071C6.48043%2012.8946%206.73478%2013%207%2013H14.59L11.29%2016.29C11.1963%2016.383%2011.1219%2016.4936%2011.0711%2016.6154C11.0203%2016.7373%2010.9942%2016.868%2010.9942%2017C10.9942%2017.132%2011.0203%2017.2627%2011.0711%2017.3846C11.1219%2017.5064%2011.1963%2017.617%2011.29%2017.71C11.383%2017.8037%2011.4936%2017.8781%2011.6154%2017.9289C11.7373%2017.9797%2011.868%2018.0058%2012%2018.0058C12.132%2018.0058%2012.2627%2017.9797%2012.3846%2017.9289C12.5064%2017.8781%2012.617%2017.8037%2012.71%2017.71L17.71%2012.71C17.801%2012.6149%2017.8724%2012.5028%2017.92%2012.38C18.02%2012.1365%2018.02%2011.8635%2017.92%2011.62Z'%20fill='white'/%3e%3c/svg%3e"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="column-right">
+              <p class="text-p-size">
+                We also help companies
+                <a class="purple-link" href="#">tackle fraud</a>,
+                <a class="purple-link" href="#">issue invoices</a>,
+                <a class="purple-link" href="#"
+                  >send virtual and physical cards</a
+                >, <a class="purple-link" href="#">manage financing</a>,
+                <a class="purple-link" href="#">wrangle business spend</a>, and
+                much more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="bg-light flex items-center justify-center">
+          <div class="section-container">
+            <div class="graphic-grid">
+              <img id="credit-card" src="/css-swipe-project/assets/credit-card-BIKZiEm4.png" alt="" />
+              <img
+                id="slack-invoice"
+                src="/css-swipe-project/assets/slack-invoice-c_GQHlep.png"
+                alt=""
+              />
+              <img id="phone" src="/css-swipe-project/assets/phone-Covc-nNl.png" alt="" />
+              <img id="dash" src="/css-swipe-project/assets/dash-BO_SaLMv.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="before:bg-primary-accent after:bg-light relative flex items-center justify-center py-[calc(var(--spacing-xl)*3)] text-white before:absolute before:inset-0 before:-top-[2%] before:-left-[10%] before:z-0 before:h-[1100px] before:-skew-y-10 after:absolute after:inset-0 after:z-[-1] after:h-1/2"
+      >
+        <div class="two-column section-container relative z-10">
+          <div class="column-left">
+            <p
+              class="text-subtitle-size text-blue-1 my-md leading-subtitle-height font-anek font-medium"
+            >
+              Designed for engineers
+            </p>
+            <h2 class="text-h3-size">
+              The world's best and most intuitive designs
+            </h2>
+            <p class="my-md text-p-size leading-p-height">
+              We abstract the hard stuff away so your teams can focus on
+              building good technology, instead of spending time and money
+              reinventing the wheel.
+            </p>
+            <button
+              class="group secondary-button bg-blue-1 text-primary-accent my-md"
+            >
+              Start Now
+              <img
+                class="icon-animation"
+                src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.92%2011.6199C17.8724%2011.4972%2017.801%2011.385%2017.71%2011.2899L12.71%206.28994C12.6168%206.1967%2012.5061%206.12274%2012.3842%206.07228C12.2624%206.02182%2012.1319%205.99585%2012%205.99585C11.7337%205.99585%2011.4783%206.10164%2011.29%206.28994C11.1968%206.38318%2011.1228%206.49387%2011.0723%206.61569C11.0219%206.73751%2010.9959%206.86808%2010.9959%206.99994C10.9959%207.26624%2011.1017%207.52164%2011.29%207.70994L14.59%2010.9999H7C6.73478%2010.9999%206.48043%2011.1053%206.29289%2011.2928C6.10536%2011.4804%206%2011.7347%206%2011.9999C6%2012.2652%206.10536%2012.5195%206.29289%2012.707C6.48043%2012.8946%206.73478%2012.9999%207%2012.9999H14.59L11.29%2016.2899C11.1963%2016.3829%2011.1219%2016.4935%2011.0711%2016.6154C11.0203%2016.7372%2010.9942%2016.8679%2010.9942%2016.9999C10.9942%2017.132%2011.0203%2017.2627%2011.0711%2017.3845C11.1219%2017.5064%2011.1963%2017.617%2011.29%2017.7099C11.383%2017.8037%2011.4936%2017.8781%2011.6154%2017.9288C11.7373%2017.9796%2011.868%2018.0057%2012%2018.0057C12.132%2018.0057%2012.2627%2017.9796%2012.3846%2017.9288C12.5064%2017.8781%2012.617%2017.8037%2012.71%2017.7099L17.71%2012.7099C17.801%2012.6148%2017.8724%2012.5027%2017.92%2012.3799C18.02%2012.1365%2018.02%2011.8634%2017.92%2011.6199Z'%20fill='black'/%3e%3c/svg%3e"
+                alt=""
+              />
+            </button>
+            <div class="flex">
+              <div
+                class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+              >
+                <img
+                  class="mb-sm h-[50px]"
+                  src="data:image/png;base64,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"
+                  alt=""
+                />
+                <h3 class="text-h6-size">Tools for all stacks</h3>
+                <p
+                  class="text-secondary-size leading-secondary-height text-grey my-md"
+                >
+                  We offer front end and back end libraries in some of the most
+                  widely used technologies, old and new.
+                </p>
+                <button class="group secondary-button text-blue-1 pl-0">
+                  See libraries
+                  <img
+                    class="icon-animation"
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.92%2011.6199C17.8724%2011.4972%2017.801%2011.385%2017.71%2011.2899L12.71%206.28994C12.6168%206.1967%2012.5061%206.12274%2012.3842%206.07228C12.2624%206.02182%2012.1319%205.99585%2012%205.99585C11.7337%205.99585%2011.4783%206.10164%2011.29%206.28994C11.1968%206.38318%2011.1228%206.49387%2011.0723%206.61569C11.0219%206.73751%2010.9959%206.86808%2010.9959%206.99994C10.9959%207.26624%2011.1017%207.52164%2011.29%207.70994L14.59%2010.9999H7C6.73478%2010.9999%206.48043%2011.1053%206.29289%2011.2928C6.10536%2011.4804%206%2011.7347%206%2011.9999C6%2012.2652%206.10536%2012.5195%206.29289%2012.707C6.48043%2012.8946%206.73478%2012.9999%207%2012.9999H14.59L11.29%2016.2899C11.1963%2016.3829%2011.1219%2016.4935%2011.0711%2016.6154C11.0203%2016.7372%2010.9942%2016.8679%2010.9942%2016.9999C10.9942%2017.132%2011.0203%2017.2627%2011.0711%2017.3845C11.1219%2017.5064%2011.1963%2017.617%2011.29%2017.7099C11.383%2017.8037%2011.4936%2017.8781%2011.6154%2017.9288C11.7373%2017.9796%2011.868%2018.0057%2012%2018.0057C12.132%2018.0057%2012.2627%2017.9796%2012.3846%2017.9288C12.5064%2017.8781%2012.617%2017.8037%2012.71%2017.7099L17.71%2012.7099C17.801%2012.6148%2017.8724%2012.5027%2017.92%2012.3799C18.02%2012.1365%2018.02%2011.8634%2017.92%2011.6199Z'%20fill='%2300D4FF'/%3e%3c/svg%3e"
+                    alt=""
+                  />
+                </button>
+              </div>
+
+              <div
+                class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+              >
+                <img
+                  class="mb-sm h-[50px]"
+                  src="data:image/png;base64,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"
+                  alt=""
+                />
+                <h3 class="text-h6-size">Custom integrations</h3>
+                <p
+                  class="text-secondary-size leading-secondary-height text-grey my-md"
+                >
+                  Use integrations for systems like Shopify, WooCommerce,
+                  NetSuite, and more.
+                </p>
+                <button class="group secondary-button text-blue-1 pl-0">
+                  Explore partners
+                  <img
+                    class="icon-animation"
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.92%2011.6199C17.8724%2011.4972%2017.801%2011.385%2017.71%2011.2899L12.71%206.28994C12.6168%206.1967%2012.5061%206.12274%2012.3842%206.07228C12.2624%206.02182%2012.1319%205.99585%2012%205.99585C11.7337%205.99585%2011.4783%206.10164%2011.29%206.28994C11.1968%206.38318%2011.1228%206.49387%2011.0723%206.61569C11.0219%206.73751%2010.9959%206.86808%2010.9959%206.99994C10.9959%207.26624%2011.1017%207.52164%2011.29%207.70994L14.59%2010.9999H7C6.73478%2010.9999%206.48043%2011.1053%206.29289%2011.2928C6.10536%2011.4804%206%2011.7347%206%2011.9999C6%2012.2652%206.10536%2012.5195%206.29289%2012.707C6.48043%2012.8946%206.73478%2012.9999%207%2012.9999H14.59L11.29%2016.2899C11.1963%2016.3829%2011.1219%2016.4935%2011.0711%2016.6154C11.0203%2016.7372%2010.9942%2016.8679%2010.9942%2016.9999C10.9942%2017.132%2011.0203%2017.2627%2011.0711%2017.3845C11.1219%2017.5064%2011.1963%2017.617%2011.29%2017.7099C11.383%2017.8037%2011.4936%2017.8781%2011.6154%2017.9288C11.7373%2017.9796%2011.868%2018.0057%2012%2018.0057C12.132%2018.0057%2012.2627%2017.9796%2012.3846%2017.9288C12.5064%2017.8781%2012.617%2017.8037%2012.71%2017.7099L17.71%2012.7099C17.801%2012.6148%2017.8724%2012.5027%2017.92%2012.3799C18.02%2012.1365%2018.02%2011.8634%2017.92%2011.6199Z'%20fill='%2300D4FF'/%3e%3c/svg%3e"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="column-right">
+            <img
+              class="mb-md max-w-[470px] rounded-[1.25rem]"
+              src="/css-swipe-project/assets/api-code-B_GrH0u_.png"
+              alt=""
+            />
+            <img
+              class="max-w-[470px] rounded-[1.25rem]"
+              src="/css-swipe-project/assets/terminal-code-B_GyF2ji.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex w-full items-center justify-center py-[calc(var(--spacing-xl)*3)]"
+      >
+        <div class="section-container">
+          <p
+            class="my-md text-subtitle-size text-purple-1 leading-subtitle-height font-anek font-medium"
+          >
+            Why Swipe
+          </p>
+          <h2 class="text-h3-size">A tech-first approach to finance</h2>
+          <div class="flex">
+            <div
+              class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+            >
+              <img
+                class="mb-sm h-[50px]"
+                src="data:image/png;base64,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"
+                alt=""
+              />
+              <h3 class="text-h6-size">Efficient always</h3>
+              <p class="my-md">
+                We've optimized every level of the finance stack, from
+                integrations to prebuilt checkout flows - no detail has been
+                spared.
+              </p>
+            </div>
+
+            <div
+              class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+            >
+              <img
+                class="mb-sm h-[50px]"
+                src="data:image/png;base64,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"
+                alt=""
+              />
+              <h3 class="text-h6-size">Fast-improving</h3>
+              <p class="my-md">
+                We make constant updates and improvements to help you stay on
+                the cutting edge of your industry, deploying to production
+                around 20X per day!
+              </p>
+            </div>
+            <div
+              class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+            >
+              <img
+                class="mb-sm h-[50px]"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAABkCAYAAACfIP5qAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAcuSURBVHgB7Z1/UttGFMffik5TSDvjnKDmzzaQ4hNUnCDJCWL6V9vpTOAE4BMAfyV/JeoJAifAPUFoA82fcARnpkBDsbbv7UJwKZZ25SfpyexnxthjyUbWd3ffD2nfAgQCgUAgEAgEAoGALBQ0nSPdglN4Dhra+PiA7+zAoupDg2m2KH/q55DCBr5q3diyBTOwDd+oY2ggzRTlUC9hr9jEV/HYfRQc498ePFQJNIxmifJet+Ef7BkRPHP+TAPFaYYo73SMR7oOWT0jjytx5tDmzKsBCEauKCQEwBM8QuoVLeAlQVu0C19BX6JAvKJcn8jvcMz/3bRODftwgc+dMUbXek9tfLWEJ2rJfJZe8wtxOwqPL4XfnI71LQ6fn5vjsscawdeXW3Y5h0c+UQ71Ov6ojdz97DACuC/9uGpOfFH8jrUP9+EpR8/jEYUM8BCO4K6j0WYtqg2YkAg4uIBVqJ/kU8uuCx+vMPNrONC1DkN9DBTnYUGtwDl0TGutSxxtbOPE8IhSBwpdWw3LKMbyp8i9g+M5DR8Rvl+nOBPCY1P+0AlX181hgCd7G77ENIqrQT3UXfwMHVsMVbCgJj6nn4F0qLVTTFE00Whd1cQ4IykKU6VABZEmCrX+fRPjRPh8jvaiw5RUtENcYh4UG/1lYiHKFHwPcBl7CKEaUTQGZ9pkbv/vEKTYEyIUYw6fq4qu7f/pXz6uoURnisdIjsvtx9q+TPeUSjWiKIxhFtUOSOeh2s/cbu1T6TTX+5pigigCCaIIJIgikCCKQIIoAgmiCCSIIpAgikCCKAIJoggkiCKQIIpA5F/kYuSX7lk8pNS7ootceqCU2kmH0HuZzB6DIO5MT/n5h4/rwwj2rCCEamkNXYXv/dg9a4Mg7oQoJIiGdGPM5raagdcgiKkXJUcQi1ZiLgUTUy2KkyAGLer22akVxV0QROl9EMRUiuIlCKKGahsEIdolNi5spM14r1O14+K6+gqiAXovktkEBCGyp6x2deunlbM948KC2qQHuq5HdMKzPldEkJevZp33rwqRonycOd26jieuoRM+TphpEYQQJ4oJ5HQ09r7k24SZJkEIcaKomTQ3ZhgVZtoEIcQZej2MBsqhqZAQaHdifI7BkSYIQlTVU9quO34Bf+9TstBpZ+V+93xTBCF4RFEwyNneBke2kgcDdH+fAiNsgqQ5v4NpkhKXKMeZ2z2n32E80tcprAALeo2th+RNn9OyRMkbblpmDroHKEwyqTDYQ1ZevJrbAi6u582P4wOw/Bse8nNH9/wn5UwiDAmCPSQBTnTOb9DAkkPjEeXcodvqYlPaighTiiA0oUjlDMMzkkTpKDstLgttynsUwkeYUgSxXxw77HMMDPC5xDSFLpvYzDUsiIswpQlieZy5lZydvJlgjnCK0s/d5wS6MAHXwtyMY/SgVEHeGyclztzH5fc7wifKEA9K53phj2FCrDCqA6leUxAl9HwvnZ0vsYeAmeqdh8odKZzhLS11oDHVntuilhtXePNQH+XGKPfhAdfsZt40Swr5V/AqmPLMip0R3M7Za5dzujmvKG5DWHxZrK0p5DeiyBRNYINXFOsaT09vsYXl2pn7kNf1LW+NAP4s8QW4pDVitD8SaoSNhzwul0p/VCyUmXIKe7pVNRpgBNwRW9DZxbjb2GQemCnnesoQVh1sSwsdg71JAsrScBm2LOy9hChHFFfbQj/8xFTilgOVanctUFpSAeryrjySbXG76NM1LVMC5BWmTjaRYL0QN0p5olBvcc3uUsusWxhbJfyN074KRwGmPNdtlHuNniJ3DW63hJIwB7qeoexAP8MTTdmIfPtGvX/OySsrTDVl1Q/0W3CtPEcVtSMcGqryymxDcHXPK/EYq7mbZQZPsutNBdqULN8z6Y0yoTjE5up84qVeFY2lugUIbCnAvdyrd/9lCxN9PfYyhjRcgTHo7sfCVJ3bhWpXhSgijDI1JpdZWijFRCcmxeOXTahQEKLa21bJY7GFnN1bPsUyVEd/Uu+MvKtTINsmWhCinvVTDs2ckzfgX4acSqivePca1xUrblKDIER9i9rY4s173sL4LOdkV6ugmb8x+EEx1ho8qmfJqPruuqfWTgsGpPCr1+fs0oGvjSublTejdMnQDFcx+ECiKxxiaxLEHoIEyP1NMQfm55nd7gTYlYs2Ubgu+EKROgWGNS8JJWdNrqLDGaHwRD5UPWPMI+xF/t9hU0KPZBS0lrdQ2ju9UejKpF1Tqw3+FHMeSkTm6nXFvTNf1mBB8d0AzoTMefRX8YyvE+CKNeYdiYIQMnvKKDYHts7Wa4QY8yzki0LYeIOudXhPpxhBlDHPohllQMgILyi7CFox+ibl3gBBiGb0lFH8XGcaonpSbcc4mlcwxzUTcBWZN0wQonk9ZZRxTkADjHkWzRaFsE7AE3xFi0jTRNCdxt3VHwgEAoFAIBAIBALC+Rd3dNYX5WA8DgAAAABJRU5ErkJggg=="
+                alt=""
+              />
+              <h3 class="text-h6-size">Tried and true</h3>
+              <p class="my-md">
+                Our systems operate with 100% uptime, with scalability and
+                uptime as a guarantee. Swipe is super duper certified so don't
+                worry.
+              </p>
+            </div>
+            <div
+              class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+            >
+              <img
+                class="mb-sm h-[50px]"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAABkCAYAAACfIP5qAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANCSURBVHgB7d3RTtNQHMfx3ykEQ8LF3sB5adQoT+B8knVcoSFBnmD4BM4bQmKU8gi+wR6BBNBL9gjjwqDC9vd0JIaEtoPuHPkNfp9kkdAmrv2mJ216WgAREZEwHKTSRnrWGjl0/Z5qIYyBQ5LtfH30oWwFRamwvnaW+h20hwicQ7bzZblTtCyBlPJBuojEDOm6PwqLlilKiY3LHdZEREmStAt/Dyl0kcQNUkVRCCkKIUUhtAipzcajTtVy5xbbcNbCLSnKDHazlaxq+dtO8SnvNBq+CCkKIUUhpCiEFIWQohBSFEKKQkhRCCkKIUUhpCiEFIWQohBSFEKKQkhRCCkKIUUhpCiEFIWQohBSFEL8875OrIGfSGFoIIw+Xrg+iHFH+W6bPsi2/6kR8PGmLo6sh+duC6R4h68f1sQYPSDYEXLVexzaNkjxRjmfHCHxOGxOhkZCvFESvERcDQyhKLfiOHfY/6BTYkKKQmien08Z+iFuWLmG3d3DpLOY3yiGT/5aY7t0eX5KPcIJ5pCGL0KKQkhRCCkKIUUhpCiEFIWQohBSFEKKQkhRCCkKIUUhpCiEFIVQ9f2UQ2v5G0mvgkyESzDwnz6eugGkUnmUY9vzMdLJzyEmwpn/jPznyLb8zakepFTx8HVs3X9Bwvs4OQKlVHEUiz4Rrg0pdT1Kfm87tnB/YeFe0tkXIUUhpCiE6s37cv6ao8rldc2DnQs8q3pR/uANVisuAvNnP1y8Pwhz32n4IqQohBSFkKIQUhRCikJIUQgpCiFFIaQohBSFkKIQUhRCikJIUQjVu5+yNHlfVvnbHhxeI7b8/6h6Z9dF0Be3FXq39nuvarlhXGs/1Iti2Iy9wTfQuutZMX6np4hAwxchRSGkKISuR/k15XVNIdiU2TA3XWdWjfJtTcYLB4jNRqdFv74eZdXlX7SPmBz2g6wzmz6euNIoO9nSAVzc9xePrfjpg+LhawGdqXO76tvHM5dNXetynThh8m3Lt3EKG1m+zgBR2NZutjwoWlJ+YptP9M5fQ5vgsV+riZm/g984d8MgVx1b/vbudqDvMPSfb1hBr+oouWo9PWv6f1pJkoS59jI7PbeL7HO2En94FBGRB+8vcBauV7VTpBgAAAAASUVORK5CYII="
+                alt=""
+              />
+              <h3 class="text-h6-size">Crazy optimized</h3>
+              <p class="my-md">
+                We use machine learning trained on billions of data points to
+                help optimize all products, from fraud to revenue recovery and
+                more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="before:bg-primary-accent relative flex w-full items-center justify-center pt-[calc(var(--spacing-xl)*3)] before:absolute before:-top-[4%] before:z-[-1] before:h-[1250px] before:w-full before:-skew-y-10"
+      >
+        <div class="section-container">
+          <div class="two-column">
+            <div class="column-left mb-[calc(var(--spacing-xl)*2)]">
+              <p
+                class="text-subtitle-size text-blue-1 leading-subtitle-height font-anek font-medium"
+              >
+                Global scale
+              </p>
+              <h2 class="text-h3-size text-white">
+                A structure for global businesses
+              </h2>
+              <p class="text-white">
+                Swipe makes moving money simple, borderless, and programmable -
+                just like the rest of the internet. We have teams all over the
+                world and we process billions and billions of dollars yearly for
+                <a class="blue-link" href="#"
+                  >startups, Fortune 500s, and everything in between.</a
+                >
+              </p>
+            </div>
+            <div class="column-right">
+              <img
+                class="absolute top-0 max-w-[844px] opacity-25"
+                src="/css-swipe-project/assets/global-graphic-oGuZpJis.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="max-w-max-width my-[calc(var(--spacing-xl)*2)] flex w-full"
+          >
+            <div
+              class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+            >
+              <h3
+                class="text-h6-size border-blue-1 pl-sm border-l-2 leading-tight text-white"
+              >
+                250M+
+              </h3>
+              <p class="text-grey my-md">
+                API requests each day, peaking at 15,000 requests a second.
+              </p>
+            </div>
+            <div
+              class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+            >
+              <h3
+                class="text-h6-size border-blue-1 pl-sm border-l-2 leading-tight text-white"
+              >
+                97%
+              </h3>
+              <p class="text-grey my-md">
+                of US adults have bought from businesses that use Swipe.
+              </p>
+            </div>
+            <div
+              class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+            >
+              <h3
+                class="text-h6-size border-blue-1 pl-sm border-l-2 leading-tight text-white"
+              >
+                135+
+              </h3>
+              <p class="text-grey my-md">
+                currencies and payment methods supported.
+              </p>
+            </div>
+            <div
+              class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+            >
+              <h3
+                class="text-h6-size border-blue-1 pl-sm border-l-2 leading-tight text-white"
+              >
+                35+
+              </h3>
+              <p class="text-grey my-md">
+                countries with local, acquiring, optimizing acceptance rates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="relative flex w-full items-center justify-center py-[calc(var(--spacing-xl)*2)] before:absolute before:z-[-1] before:h-full before:w-full before:bg-white"
+      >
+        <div class="two-column">
+          <div class="column-left h-[446px]">
+            <p
+              class="text-subtitle-size text-purple-1 leading-subtitle-height font-anek font-medium"
+            >
+              Virtual events
+            </p>
+            <h2 class="text-h3-size">Check out Sessions now!</h2>
+            <p class="text-p-size pr-xl">
+              Swipe Sessions is our annual conference - it's now available to
+              watch on demand! Check it out and become an "internet economy"
+              genius, and see how Swipe can transform the way you do business
+              online.
+            </p>
+            <button class="group purple-button">
+              Start now
+              <img
+                class="icon-animation"
+                src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.92%2011.62C17.8724%2011.4973%2017.801%2011.3851%2017.71%2011.29L12.71%206.29C12.6168%206.19676%2012.5061%206.1228%2012.3842%206.07234C12.2624%206.02188%2012.1319%205.99591%2012%205.99591C11.7337%205.99591%2011.4783%206.1017%2011.29%206.29C11.1968%206.38324%2011.1228%206.49393%2011.0723%206.61575C11.0219%206.73758%2010.9959%206.86814%2010.9959%207C10.9959%207.2663%2011.1017%207.5217%2011.29%207.71L14.59%2011H7C6.73478%2011%206.48043%2011.1054%206.29289%2011.2929C6.10536%2011.4804%206%2011.7348%206%2012C6%2012.2652%206.10536%2012.5196%206.29289%2012.7071C6.48043%2012.8946%206.73478%2013%207%2013H14.59L11.29%2016.29C11.1963%2016.383%2011.1219%2016.4936%2011.0711%2016.6154C11.0203%2016.7373%2010.9942%2016.868%2010.9942%2017C10.9942%2017.132%2011.0203%2017.2627%2011.0711%2017.3846C11.1219%2017.5064%2011.1963%2017.617%2011.29%2017.71C11.383%2017.8037%2011.4936%2017.8781%2011.6154%2017.9289C11.7373%2017.9797%2011.868%2018.0058%2012%2018.0058C12.132%2018.0058%2012.2627%2017.9797%2012.3846%2017.9289C12.5064%2017.8781%2012.617%2017.8037%2012.71%2017.71L17.71%2012.71C17.801%2012.6149%2017.8724%2012.5028%2017.92%2012.38C18.02%2012.1365%2018.02%2011.8635%2017.92%2011.62Z'%20fill='white'/%3e%3c/svg%3e"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="column-right">
+            <div
+              class="shadow-standard h-[446px] w-[540px] overflow-hidden rounded-[1.25rem]"
+            >
+              <div
+                class="relative flex h-1/2 w-full items-center justify-center before:absolute before:inset-0 before:-top-[40%] before:z-0 before:h-[150%] before:w-full before:-skew-y-6 before:bg-[linear-gradient(101.33deg,_#08209a_0.76%,_#6563ff_33.33%,_#36c5f0_76.92%,_#83e2ff_96.96%)]"
+              >
+                <img
+                  class="relative z-10 w-3/5"
+                  src="/css-swipe-project/assets/swipe-sessions-YDtLD3wS.png"
+                  alt=""
+                />
+                <div class="left-xl absolute -bottom-[70px] z-10 flex">
+                  <img class="h-[80px]" src="/css-swipe-project/assets/avatar1-DLYNlxA2.png" alt="" />
+                  <img
+                    class="absolute left-[55px] h-[80px]"
+                    src="/css-swipe-project/assets/avatar2-CjHkB214.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="p-xl box-border h-1/2 w-full">
+                <div class="max-w-1/2">
+                  <p
+                    class="text-subtitle-size text-purple-1 pt-lg pb-md leading-subtitle-height font-anek font-medium"
+                  >
+                    Keynote
+                  </p>
+                  <p
+                    class="text-secondary-size leading-secondary-height font-bold tracking-[.015rem]"
+                  >
+                    Everything you need to know about the internet economy
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-xl flex items-center justify-center">
+        <div class="two-column section-container">
+          <div class="column-left">
+            <h2 class="text-h3-size">What are you waiting for?</h2>
+            <p class="text-p-size pr-xl">
+              Explore <a class="purple-link" href="#">Swipe</a> now, or create
+              an account and start accepting payments today! If you need a
+              custom package for your business, let's chat today.
+            </p>
+            <button class="group purple-button">
+              Start now
+              <img
+                class="icon-animation"
+                src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.92%2011.62C17.8724%2011.4973%2017.801%2011.3851%2017.71%2011.29L12.71%206.29C12.6168%206.19676%2012.5061%206.1228%2012.3842%206.07234C12.2624%206.02188%2012.1319%205.99591%2012%205.99591C11.7337%205.99591%2011.4783%206.1017%2011.29%206.29C11.1968%206.38324%2011.1228%206.49393%2011.0723%206.61575C11.0219%206.73758%2010.9959%206.86814%2010.9959%207C10.9959%207.2663%2011.1017%207.5217%2011.29%207.71L14.59%2011H7C6.73478%2011%206.48043%2011.1054%206.29289%2011.2929C6.10536%2011.4804%206%2011.7348%206%2012C6%2012.2652%206.10536%2012.5196%206.29289%2012.7071C6.48043%2012.8946%206.73478%2013%207%2013H14.59L11.29%2016.29C11.1963%2016.383%2011.1219%2016.4936%2011.0711%2016.6154C11.0203%2016.7373%2010.9942%2016.868%2010.9942%2017C10.9942%2017.132%2011.0203%2017.2627%2011.0711%2017.3846C11.1219%2017.5064%2011.1963%2017.617%2011.29%2017.71C11.383%2017.8037%2011.4936%2017.8781%2011.6154%2017.9289C11.7373%2017.9797%2011.868%2018.0058%2012%2018.0058C12.132%2018.0058%2012.2627%2017.9797%2012.3846%2017.9289C12.5064%2017.8781%2012.617%2017.8037%2012.71%2017.71L17.71%2012.71C17.801%2012.6149%2017.8724%2012.5028%2017.92%2012.38C18.02%2012.1365%2018.02%2011.8635%2017.92%2011.62Z'%20fill='white'/%3e%3c/svg%3e"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="column-right">
+            <div class="flex">
+              <div
+                class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+              >
+                <img
+                  class="mb-sm h-[50px]"
+                  src="data:image/png;base64,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"
+                  alt=""
+                />
+                <h3 class="text-h6-size">Always know what you pay</h3>
+                <p
+                  class="text-secondary-size leading-secondary-height text-grey my-md"
+                >
+                  Integrated per-transaction pricing with no hidden fees.
+                </p>
+                <button class="group secondary-button text-purple-1 pl-0">
+                  Pricing details
+                  <img
+                    class="icon-animation"
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.92%2011.62C17.8724%2011.4973%2017.801%2011.3851%2017.71%2011.29L12.71%206.29C12.6168%206.19676%2012.5061%206.1228%2012.3842%206.07234C12.2624%206.02188%2012.1319%205.99591%2012%205.99591C11.7337%205.99591%2011.4783%206.1017%2011.29%206.29C11.1968%206.38324%2011.1228%206.49393%2011.0723%206.61575C11.0219%206.73758%2010.9959%206.86814%2010.9959%207C10.9959%207.2663%2011.1017%207.5217%2011.29%207.71L14.59%2011H7C6.73478%2011%206.48043%2011.1054%206.29289%2011.2929C6.10536%2011.4804%206%2011.7348%206%2012C6%2012.2652%206.10536%2012.5196%206.29289%2012.7071C6.48043%2012.8946%206.73478%2013%207%2013H14.59L11.29%2016.29C11.1963%2016.383%2011.1219%2016.4936%2011.0711%2016.6154C11.0203%2016.7373%2010.9942%2016.868%2010.9942%2017C10.9942%2017.132%2011.0203%2017.2627%2011.0711%2017.3846C11.1219%2017.5064%2011.1963%2017.617%2011.29%2017.71C11.383%2017.8037%2011.4936%2017.8781%2011.6154%2017.9289C11.7373%2017.9797%2011.868%2018.0058%2012%2018.0058C12.132%2018.0058%2012.2627%2017.9797%2012.3846%2017.9289C12.5064%2017.8781%2012.617%2017.8037%2012.71%2017.71L17.71%2012.71C17.801%2012.6149%2017.8724%2012.5028%2017.92%2012.38C18.02%2012.1365%2018.02%2011.8635%2017.92%2011.62Z'%20fill='%237000FF'/%3e%3c/svg%3e"
+                    alt=""
+                  />
+                </button>
+              </div>
+              <div
+                class="pt-sm pr-md pb-sm flex flex-col items-start justify-start"
+              >
+                <img
+                  class="mb-sm h-[50px]"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAABkCAYAAACfIP5qAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANCSURBVHgB7d3RTtNQHMfx3ykEQ8LF3sB5adQoT+B8knVcoSFBnmD4BM4bQmKU8gi+wR6BBNBL9gjjwqDC9vd0JIaEtoPuHPkNfp9kkdAmrv2mJ216WgAREZEwHKTSRnrWGjl0/Z5qIYyBQ5LtfH30oWwFRamwvnaW+h20hwicQ7bzZblTtCyBlPJBuojEDOm6PwqLlilKiY3LHdZEREmStAt/Dyl0kcQNUkVRCCkKIUUhtAipzcajTtVy5xbbcNbCLSnKDHazlaxq+dtO8SnvNBq+CCkKIUUhpCiEFIWQohBSFEKKQkhRCCkKIUUhpCiEFIWQohBSFEKKQkhRCCkKIUUhpCiEFIWQohBSFEL8875OrIGfSGFoIIw+Xrg+iHFH+W6bPsi2/6kR8PGmLo6sh+duC6R4h68f1sQYPSDYEXLVexzaNkjxRjmfHCHxOGxOhkZCvFESvERcDQyhKLfiOHfY/6BTYkKKQmien08Z+iFuWLmG3d3DpLOY3yiGT/5aY7t0eX5KPcIJ5pCGL0KKQkhRCCkKIUUhpCiEFIWQohBSFEKKQkhRCCkKIUUhpCiEFIVQ9f2UQ2v5G0mvgkyESzDwnz6eugGkUnmUY9vzMdLJzyEmwpn/jPznyLb8zakepFTx8HVs3X9Bwvs4OQKlVHEUiz4Rrg0pdT1Kfm87tnB/YeFe0tkXIUUhpCiE6s37cv6ao8rldc2DnQs8q3pR/uANVisuAvNnP1y8Pwhz32n4IqQohBSFkKIQUhRCikJIUQgpCiFFIaQohBSFkKIQUhRCikJIUQjVu5+yNHlfVvnbHhxeI7b8/6h6Z9dF0Be3FXq39nuvarlhXGs/1Iti2Iy9wTfQuutZMX6np4hAwxchRSGkKISuR/k15XVNIdiU2TA3XWdWjfJtTcYLB4jNRqdFv74eZdXlX7SPmBz2g6wzmz6euNIoO9nSAVzc9xePrfjpg+LhawGdqXO76tvHM5dNXetynThh8m3Lt3EKG1m+zgBR2NZutjwoWlJ+YptP9M5fQ5vgsV+riZm/g984d8MgVx1b/vbudqDvMPSfb1hBr+oouWo9PWv6f1pJkoS59jI7PbeL7HO2En94FBGRB+8vcBauV7VTpBgAAAAASUVORK5CYII="
+                  alt=""
+                />
+                <h3 class="text-h6-size">Start your integration</h3>
+                <p
+                  class="text-secondary-size leading-secondary-height text-grey my-md"
+                >
+                  Get up and running with Stripe in as little as 10 minutes.
+                </p>
+                <button class="group secondary-button text-purple-1 pl-0">
+                  API reference
+                  <img
+                    class="icon-animation"
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.92%2011.62C17.8724%2011.4973%2017.801%2011.3851%2017.71%2011.29L12.71%206.29C12.6168%206.19676%2012.5061%206.1228%2012.3842%206.07234C12.2624%206.02188%2012.1319%205.99591%2012%205.99591C11.7337%205.99591%2011.4783%206.1017%2011.29%206.29C11.1968%206.38324%2011.1228%206.49393%2011.0723%206.61575C11.0219%206.73758%2010.9959%206.86814%2010.9959%207C10.9959%207.2663%2011.1017%207.5217%2011.29%207.71L14.59%2011H7C6.73478%2011%206.48043%2011.1054%206.29289%2011.2929C6.10536%2011.4804%206%2011.7348%206%2012C6%2012.2652%206.10536%2012.5196%206.29289%2012.7071C6.48043%2012.8946%206.73478%2013%207%2013H14.59L11.29%2016.29C11.1963%2016.383%2011.1219%2016.4936%2011.0711%2016.6154C11.0203%2016.7373%2010.9942%2016.868%2010.9942%2017C10.9942%2017.132%2011.0203%2017.2627%2011.0711%2017.3846C11.1219%2017.5064%2011.1963%2017.617%2011.29%2017.71C11.383%2017.8037%2011.4936%2017.8781%2011.6154%2017.9289C11.7373%2017.9797%2011.868%2018.0058%2012%2018.0058C12.132%2018.0058%2012.2627%2017.9797%2012.3846%2017.9289C12.5064%2017.8781%2012.617%2017.8037%2012.71%2017.71L17.71%2012.71C17.801%2012.6149%2017.8724%2012.5028%2017.92%2012.38C18.02%2012.1365%2018.02%2011.8635%2017.92%2011.62Z'%20fill='%237000FF'/%3e%3c/svg%3e"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="py-xl bg-light flex items-center justify-center">
+        <div class="section-container flex">
+          <div class="w-1/4">
+            <img class="mb-lg" src="/css-swipe-project/assets/logo-dark-DrQRcTOx.svg" alt="" />
+            <div class="mb-md flex items-center">
+              <img class="w-6" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAxCAYAAACcXioiAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHmSURBVHgB7ZjhbcMgEIWfMkFGuBE6Ahu0I7BBskG9QdIJ0hU6QbJBRkg3SDdIQQkSOozBxgYs8Un3A9vgB7wDbKDRaDQaT7Yq9irOKu4qHiquKk4qCJVii34MxA0VdSJWdF8ntijEVNE8OmRkiujzS6QZ6Q7uLFQrmjxt3tnzqxBtt23Xu2MFom1kTxvVi7bh75IYSQnRBuppm8Y0sIObQEuLtpFIsM8BZUTbTLaPRDnRBkKCfXjPb8gj2kYiwT7c94T8TLYP4E5d7gMUYYR9Nj3Xfll5h7wIVr7A1TRIB3cEdB6ckMdOSfbRaMvcMLwSSSxjLULC6mPzhuFO6NDJrmdFYD4kElYfDqn4RrgjxmIS6RZLto8Pifjz0NRcIcxkn9BLOoRnRd8fmyMSM9onBoGnxXydOGAci9knBL1e1jcrsbNAyGCfGPgodpH1JDLbx8eeCblG1itmH462DD8MikAdQoJ9NpiXPxU/7NpHoI5g5QtGnn3mRsDdsYeSuRr72HAb7T3PERJXn7ktZPhi5XfPc9xeFxS2j4H/UfPtCVdUaB9DaE8gVLJ5+ZBwk9mG7xnFNi8ffXvC5+uegHv0kKiQI+KO4NXZx0CI+z3ZoWJCn6dHrADC89vBLJt6VnTSCjQaZfkH1BOvMFppZbcAAAAASUVORK5CYII=" alt="" />
+              <a href="#">United States</a>
+            </div>
+            <div class="flex items-center">
+              <img class="w-6" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAxCAYAAACcXioiAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAISSURBVHgB7ZmLbcIwEIb/MgEjeAQ2ICN0g3qDsgHZADYIG6BOEJgAOkHoBLABzalGqi6XYMevVsonnVDAPt/LyTkAExMTEzl5QTiKVpatLIzMjRC3Vi7m89jKwUh2yMB1K9dW7o7StFK1opABMnwDd6P7JKkj7xgXcZuMaERmKOrkVGWMeOyBB3PzHf22w3AANogAGVBjOHJzuKHNXEnnaYS+Qc6QI76CPyVkJ2oEQiobipxCOBTkbHiXkxaUUjaCptegIDsxOstKUBg68jZrUqmOCthOUKQQH4XuXcq5lBQCpnIEK2F9pyzs0C2d1PBSKh3mdiZrpIdn4Wo7sUD+6BNUMnwvFHzQTJjIBx2QB2q9P9h3Cz5IcoAPOiIfZ3ZdwALqQ36nbYF8LDCinHndxXjq2qLwZCNLR8q7xZiUDNozwz9HcuDGrnOWEF+b22blgEI++A3kwgdIDnw+UZISxa6/+ADJAX7vXSIfr+z6bDGn00qM7scD8LSVsJ2okR4Nj56s9JkcCN4RVy6TFfIeaNbC+gqObJHvSMmNd4r+A6kfb5D+UO+1pnQ2PSEOCvJrFQ1P9oLS0A830icZv4Unb5Bf+ymEYw35ZW8NT/qM1/CH9heVZ9OzRg3Ph2do4xV+yoSMrjD8ej1a2cQWckojAA2Q3HiKerB+K8bfR30RLxGhURzaXD7Gks690V9gYuJv8A3XnrcXFRHN7gAAAABJRU5ErkJggg==" alt="" />
+              <a href="#">English (United States)</a>
+            </div>
+            <div></div>
+          </div>
+          <div class="w-1/4">
+            <h3 class="text-h6-size font-semibold">Products</h3>
+            <ul class="my-md space-y-2.5">
+              <li><a href="#">Atlas</a></li>
+              <li><a href="#">Billing</a></li>
+              <li><a href="#">Invoicing</a></li>
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Checkout</a></li>
+              <li><a href="#">Identity</a></li>
+            </ul>
+          </div>
+          <div class="w-1/4">
+            <h3 class="text-h6-size font-semibold">Use Cases</h3>
+            <ul class="my-md space-y-2.5">
+              <li><a href="#">eCommerce</a></li>
+              <li><a href="#">SaaS</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Embedded Finance</a></li>
+              <li><a href="#">Crypto</a></li>
+              <li><a href="#">Creator Economy</a></li>
+            </ul>
+          </div>
+          <div class="w-1/4">
+            <h3 class="text-h6-size font-semibold">Resources</h3>
+            <ul class="my-md space-y-2.5">
+              <li><a href="#">Support Center</a></li>
+              <li><a href="#">Guides</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Licenses</a></li>
+              <li><a href="#">Privacy & Terms</a></li>
+              <li><a href="#">Cookie Settings</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <div id="root"></div>
+  </body>
+</html>
